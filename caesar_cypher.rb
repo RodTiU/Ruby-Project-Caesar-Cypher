@@ -6,7 +6,7 @@ def caesar_cypher(word, right_skip = 0)
     if char_range.include? char
       shift_index = char_range.index(char) + right_skip
       if shift_index > char_range.length
-        shift_index = shift_index - char_range.length
+        shift_index -= char_range.length
       end
       caesar_cypher_split.push(char_range[shift_index])
     else
